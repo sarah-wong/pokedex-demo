@@ -1,0 +1,19 @@
+.banner{
+    border:solid black;
+    height:15vh;
+}
+main{
+    display:flex;
+    height:80vh;
+    margin:1vh 1vw;
+}
+.searchBar{
+    border: solid red;
+    height:100%;
+    width:20vw;
+}
+.cardContainer{
+    border:solid cyan;
+    height:100%;
+    width:75vw;
+}
