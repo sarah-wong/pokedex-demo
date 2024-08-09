@@ -5,6 +5,7 @@ body{
     background-image:url("/img/pokeball-background.jpg");
     background:bottom cover fixed;
     --pokemon-red:#C12026;
+    font-family:sans-serif;
 }
 .banner{
     border:1px solid var(--pokemon-red);
@@ -27,12 +28,20 @@ main{
     /* border:solid black; */
     display:flex;
     height:80vh;
+    margin:0px 1em;
+    justify-content:space-between;
 }
 .searchBar{
-    border: solid red;
-    width:27%;
+    border: 2px solid var(--pokemon-red);
+    border-radius:10px;
+    /* width:25%; */
+    height:fit-content;
+    padding:0px 1em 2em;
+}
+.searchBar label{
+    font-weight:bold;
 }
 .cardContainer{
     border:solid cyan;
-    width:73%;
+    width:72%;
 }
