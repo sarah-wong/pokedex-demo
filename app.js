@@ -1,5 +1,7 @@
 const imgDomain = "https://img.pokemondb.net/artwork/avif/";
 const imgType = ".avif";
+const cardContainer = document.querySelector(".cardContainer");
+const searchForm = document.querySelector(".filter");
 
 let pokemonData = [
     {
@@ -639,10 +641,20 @@ function generateCard(index, pokemon, digits = 3){
     return card;
 }
 
-
-const container = document.querySelector(".cardContainer");
 for (let i = 0; i < pokemonData.length; i++) {
-    console.log(`loading pokemon #${i+1}: ${pokemonData[i]["name"]}`);
     const card = generateCard(i+1,pokemonData[i]);
-    container.appendChild(card);
+    cardContainer.appendChild(card);
 }
+
+function handleTypeSelect(){
+    const type1 = searchForm.children["type1"];
+    const type2 = searchForm.children["type2"];
+    if(type1.value){
+        type2.disabled = false;
+    }
+    else{
+        type2.disabled = true;
+        type2.value = "";
+    }
+}
+type1.onchange = handleTypeSelect;
