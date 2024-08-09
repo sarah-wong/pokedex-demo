@@ -1,6 +1,14 @@
+body{
+    padding:0px;
+    margin:0px;
+    overflow:hidden;
+    background-image:url("/img/pokeball-background.jpg");
+    background:bottom cover fixed;
+    --pokemon-red:#C12026;
+}
 .banner{
-    border:1px solid grey;
-    border-radius:5px;
+    border:1px solid var(--pokemon-red);
+    border-radius:10px;
     height:15vh;
     display:flex;
     justify-content:space-evenly;
@@ -8,6 +16,7 @@
     background-image:url("https://wallpapercave.com/wp/wp12045006.jpg");
     background-size:cover;
     background-position:center;
+    margin:1em;
 }
 .page-header{
     color: #FFFFFF;
@@ -15,17 +24,15 @@
     text-shadow: 1px 3px 0 #000000, 1px 13px 5px #000000;
 }
 main{
+    /* border:solid black; */
     display:flex;
     height:80vh;
-    margin:1vh 1vw;
 }
 .searchBar{
     border: solid red;
-    height:100%;
-    width:20vw;
+    width:27%;
 }
 .cardContainer{
     border:solid cyan;
-    height:100%;
-    width:75vw;
+    width:73%;
 }
