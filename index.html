@@ -13,10 +13,12 @@
         <div class="banner">
             <h1 class="page-header">POKÉDEX DEMO</h1>
         </div>
+        <div class="bg left"></div>
+        <div class="bg right"></div>
         <main>
             <div class="searchBar">
                 <form action="" class="dexSearch">
-                    <h1>Search</h1>
+                    <h1>Search Filter</h1>
                     <!-- name text field -->
                     <label for="name">Name:</label>
                     <input type="text" name="name" id="nameField">
@@ -73,26 +75,8 @@
                             <option value="fairy">Fairy</option>
                         </select>
                         <br><br>
-
-                        <!-- egg group selector -->
-                         <label for="egg group">Egg Group:</label>
-                         <select name="egg group" id="group">
-                            <option value="">Any</option>
-                            <option value="amorphous">Amorphous</option>
-                            <option value="bug">Bug</option>
-                            <option value="dragon">Dragon</option>
-                            <option value="fairy">Fairy</option>
-                            <option value="field">Field</option>
-                            <option value="flying">Flying</option>
-                            <option value="grass">Grass</option>
-                            <option value="humanLike">Human-Like</option>
-                            <option value="mineral">Mineral</option>
-                            <option value="monster">Monster</option>
-                            <option value="water1">Water 1</option>
-                            <option value="water2">Water 2</option>
-                            <option value="water3">Water 3</option>
-
-                         </select>
+                        <input type="submit" value="Search" class="searchBtn">
+                        <input type="submit" value="Clear" class="clearBtn">
                 </form>
             </div>
             <div class="cardContainer">
@@ -105,7 +89,6 @@
                     <div class="grass type">GRASS</div>
                     <div class="poison type">POISON</div>
                 </div>
-                
             </div>
         </main>
         
