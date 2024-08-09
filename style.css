@@ -1,5 +1,6 @@
 html{
     --pokemon-red:#A22E32;
+    --flying-purple:#899AFF;
 }
 body{
     padding:0px;
@@ -30,10 +31,11 @@ main{
     display:flex;
     height:80vh;
     margin:0px 1em;
-    justify-content:space-between;
+    flex-flow:column nowrap;
+    align-items:flex-end;
 }
 .bg{
-    position:absolute;
+    position:fixed;
     height:100%;
     top:0px;
     z-index:-1;
@@ -60,6 +62,8 @@ main{
     width:25vw;
     height:fit-content;
     padding:0px 1em 2em;
+    position:fixed;
+    left:1em;
 }
 .searchBar label{
     font-weight:bold;
@@ -82,6 +86,7 @@ main{
     gap:2em;
     padding:0px 1em;
     text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px 2px 2px rgba(0,0,0,0);
+    margin-bottom:2em;
 }
 .card .number{
     font-size:4em;
@@ -102,11 +107,66 @@ main{
     font-size:1.5em;
     font-weight:bold;
     color:white;
+    width:130px;
+    text-align:center;
+}
+.sticky {
+    position:fixed;
+    top:0;
+    width:100%;
 }
 
+.normal{
+    background-color:grey;
+}
+.fire{
+    background-color:orangered;
+}
+.water{
+    background-color:cornflowerblue;
+}
+.electric{
+    background-color:gold;
+}
 .grass{
     background-color:lightgreen;
 }
+.ice{
+    background-color:skyblue;
+}
+.fighting{
+    background-color:crimson;
+}
 .poison{
     background-color:darkmagenta;
+}
+.ground{
+    background-color:goldenrod;
+}
+.flying{
+    background-color:var(--flying-purple);
+}
+.psychic{
+    background-color:hotpink;
+}
+.bug{
+    background-color:yellowgreen;
+}
+.rock{
+    background-color:tan;
+}
+.ghost{
+    background-color:darkslateblue;
+}
+.dragon{
+    background-color:darkorchid;
+}
+.dark{
+    background-color:brown;
+}
+.steel{
+    background-color:silver;
+}
+.fairy{
+    background-color:lightpink;
 }
