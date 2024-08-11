@@ -661,11 +661,26 @@ type1.onchange = handleTypeSelect;
 
 function handleSearch(e){
   e.preventDefault();
-  const name = searchForm.children["name"].value;
-  const type1 = searchForm.children["type1"].value;
-  const type2 = searchForm.children["type2"].value;
+  const nameInput = searchForm.children["name"].value.toLowerCase();
+  const typeInput1 = searchForm.children["type1"].value;
+  const typeInput2 = searchForm.children["type2"].value;
 
-  console.log(`searched for: ${name}, ${type1}, ${type2}`);
+  for(let i = 0; i < pokemonData.length; i++){
+    const pokemon = pokemonData[i];
+    const card = cardContainer.children[i];
+
+    const name = pokemon["name"].toLowerCase();
+    const type = pokemon["type"].toLowerCase();
+    
+    const nameCheck = !nameInput || name.includes(nameInput);
+    const typeCheck1 = !typeInput1 || type.includes(typeInput1);
+    const typeCheck2 = !typeInput2 || type.includes(typeInput2);
+
+    const eval = (nameCheck && typeCheck1 && typeCheck2)
+
+    card.style.display = eval? "flex":"none";
+    console.log(`display "${pokemon['name']} set to ${eval}" `);
+  }
 }
 
 searchForm.addEventListener("submit", handleSearch);
