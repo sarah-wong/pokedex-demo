@@ -684,3 +684,10 @@ function handleSearch(e){
 }
 
 searchForm.addEventListener("submit", handleSearch);
+
+function handleClear(){
+  for (const card of cardContainer.children) {
+    card.style.display = "flex";
+  }
+}
+searchForm.addEventListener("reset", handleClear);
