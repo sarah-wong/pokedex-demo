@@ -665,6 +665,8 @@ function handleSearch(e){
   const typeInput1 = searchForm.children["type1"].value;
   const typeInput2 = searchForm.children["type2"].value;
 
+  let foundOne = false;
+
   for(let i = 0; i < pokemonData.length; i++){
     const pokemon = pokemonData[i];
     const card = cardContainer.children[i];
@@ -676,16 +678,25 @@ function handleSearch(e){
     const typeCheck1 = !typeInput1 || type.includes(typeInput1);
     const typeCheck2 = !typeInput2 || type.includes(typeInput2);
 
-    const eval = (nameCheck && typeCheck1 && typeCheck2)
+    const eval = (nameCheck && typeCheck1 && typeCheck2);
 
     card.style.display = eval? "flex":"none";
-    console.log(`display "${pokemon['name']} set to ${eval}" `);
+    // console.log(`display "${pokemon['name']} set to ${eval}" `);
+    if(!foundOne && eval)
+    {
+      foundOne = true;
+    }
+  }
+  if(!foundOne){
+    window.alert("No Pokemon found matching search criteria! Please try again.");
+    handleClear();
   }
 }
 
 searchForm.addEventListener("submit", handleSearch);
 
 function handleClear(){
+  searchForm.clea
   for (const card of cardContainer.children) {
     card.style.display = "flex";
   }
