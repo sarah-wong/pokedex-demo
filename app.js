@@ -1,7 +1,7 @@
 const imgDomain = "https://img.pokemondb.net/artwork/avif/";
 const imgType = ".avif";
-const cardContainer = document.querySelector(".cardContainer");
-const searchForm = document.querySelector(".filter");
+const cardContainer = document.getElementById("pokemonCards");
+const searchForm = document.getElementById("pokemonSearch");
 
 let pokemonData = [
     {
