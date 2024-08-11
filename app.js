@@ -658,3 +658,14 @@ function handleTypeSelect(){
     }
 }
 type1.onchange = handleTypeSelect;
+
+function handleSearch(e){
+  e.preventDefault();
+  const name = searchForm.children["name"].value;
+  const type1 = searchForm.children["type1"].value;
+  const type2 = searchForm.children["type2"].value;
+
+  console.log(`searched for: ${name}, ${type1}, ${type2}`);
+}
+
+searchForm.addEventListener("submit", handleSearch);

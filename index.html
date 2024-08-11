@@ -23,13 +23,7 @@
                     <label for="name">Name:</label>
                     <input type="text" name="name" id="nameField">
                     <br><br>
-                    <!-- id range num fields -->
-                    <label for="idRange">№:</label>
-                    <input type="number" name="min id" id="idMin" min="001" max="151">
-                    –
-                    <input type="number" name="max id" id="idMax" min="001" max="151">
-                    <br><br>
-
+                    
                     <!-- type selectors -->
                     <label for="type">Type:</label>
                         <select name="Type 1" id="type1">
@@ -75,8 +69,8 @@
                             <option value="fairy">Fairy</option>
                         </select>
                         <br><br>
-                        <input type="submit" value="Search" class="searchBtn">
-                        <input type="submit" value="Clear" class="clearBtn">
+                        <input type="submit" value="Search" class="searchBtn" name="search">
+                        <input type="reset" value="Clear" class="clearBtn" name="clear">
                 </form>
             </div>
             <div class="cardContainer"></div>
