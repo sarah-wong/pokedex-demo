@@ -681,7 +681,7 @@ function handleSearch(e){
     const eval = (nameCheck && typeCheck1 && typeCheck2);
 
     card.style.display = eval? "flex":"none";
-    // console.log(`display "${pokemon['name']} set to ${eval}" `);
+    console.log(`display "${pokemon['name']} set to ${eval}" `);
     if(!foundOne && eval)
     {
       foundOne = true;
